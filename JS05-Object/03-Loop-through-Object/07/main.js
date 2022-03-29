@@ -35,6 +35,12 @@ const employees = {
 //       break;
 //     }
 // }while()
+const name = prompt("who?");
+if (employees[name]) {
+  console.log(
+    `Name:, ${name} salary:,  ${employees[name].salary},  'address:' , ${employees[name].address.district},  ${employees[name].address.console}  `
+  );
+}
 
-console.log(employees.john);
-console.log(employees.john);
+// console.log(employees.john);
+// console.log(employees.john);

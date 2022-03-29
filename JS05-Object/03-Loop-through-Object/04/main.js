@@ -17,11 +17,11 @@ let Object1 = {};
 // // function ()
 
 do {
-  var input1 = prompt("Your key Here!");
+  let input1 = prompt("Your key Here!");
   if (input1 == "stop") {
     break;
   }
-  var input2 = prompt("Your Value here!");
+  let input2 = prompt("Your Value here!");
   Object1[input1] = input2;
 } while (input1 !== "stop");
 

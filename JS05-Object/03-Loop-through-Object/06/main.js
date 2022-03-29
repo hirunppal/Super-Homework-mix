@@ -3,34 +3,42 @@
 // - สร้างฟังก์ชันคำนวณราคาที่แท้จริงของ object (ราคาหลังหักส่วนลด)
 
 itemls = {};
-function itemls(name, amu, price, discout) {
+function fillitem(name, amu, price, discout) {
   this.name = name;
   this.amu = amu;
   this.price = price;
   this.discout = discout;
 }
 
-Object1 = {};
+const obj1 = new fillitem("a", "b", "c", "d");
+console.log(obj1);
 
+let i = 0;
 do {
-  let input1 = prompt("ชื่อสินค้า!");
-  if (input1 == "stop") {
+  var input1 = prompt("ชื่อสินค้า!");
+  if (input1 == null) {
     break;
   }
 
-  let input2 = prompt("จำนวนที่ขาย!");
-  if (input2 == "stop") {
+  var input2 = prompt("จำนวนที่ขาย!");
+  if (input2 == null) {
     break;
   }
-  let input3 = prompt("ราคาต่อชิ้น!");
-  if (input3 == "stop") {
+  var input3 = prompt("ราคาต่อชิ้น!");
+  if (input3 == null) {
     break;
   }
-  let input4 = prompt("และส่วนลดต่อชิ้นหน่วยเป็นเปอร์เซนต์!");
+  var input4 = prompt("และส่วนลดต่อชิ้นหน่วยเป็นเปอร์เซนต์!");
   if (input4 == 0 || input4 == null || input4 == undefined) {
-    itemls(input1, input2, input3);
-  } else
-    itemls(input1, input2, "discounted =" + input2 * (100 - input4), input4);
-} while (input2 !== "stop");
+    const itemlist = fillitem(input1, input2, input3);
+  } else if (input4 > 0) {
+    const itemlist = fillitem(
+      input1,
+      input2,
+      "discounted =" + input2 * (100 - input4),
+      input4
+    );
+  }
+} while (input1 == true);
 
-console.log(itemls);
+console.log(itemlist);
