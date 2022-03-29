@@ -18,15 +18,19 @@ let menu = {
 // //f ```
 
 function multiplyNumeric(obj, num) {
+  const result = {};
   for (let k in obj) {
     if (!isNaN(obj[k])) {
-      obj[k] = obj[k] * num;
-    }
+      result[k] = obj[k] * num;
+    } else result[k] = obj[k];
   }
+  return result;
 }
-console.log(multiplyNumeric(menu, 3));
-console.log(menu);
 
+console.log(multiplyNumeric(menu, 3));
+
+console.log(menu);
+// console.log(result);
 // for (const k in obj){
 //     if (!(Number(menu[k] == 0|| Number(menu[k] == null || Number(menu[k] == undefined || Number(menu[k] == NaN))
 //                         {

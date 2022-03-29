@@ -26,6 +26,7 @@ for (let k in user) {
 console.log("Obg User is empty?" + thisEmpthy);
 thisEmpthy = true;
 
+//fuction style
 function obcheck(objname) {
   let thisEmpthy = true;
   for (let k in objname) {
