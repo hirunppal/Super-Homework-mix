@@ -10,18 +10,32 @@ funcdemical = (x) => {
 };
 
 //test function
-minmaxRan = (min, max) => {
-  let x = min + Math.random() * (max - min);
-  return x;
-};
+// minmaxRan = (min, max) => {
+//   let x = min + Math.random() * (max - min);
+//   return x;
+// };
 
-for (let i = -1000; 1 <= 1000; i++) {
-  let z = minmaxRan(-1000000, 1000000);
-  console.log(z);
-  console.log(funcdemical(z));
+// for (let i = -1000; 1 <= 1000; i++) {
+//   let z = minmaxRan(-1000000, 1000000);
+//   console.log(z);
+//   console.log(funcdemical(z));
+// }
+console.log(funcdemical(5.1));
+console.log(funcdemical(-5.1181));
+console.log(funcdemical(-5.0));
+console.log(funcdemical(-5.0));
+console.log(funcdemical(-100093.28899994));
+
+//string way
+function to2Digit(num) {
+  const splited = String(num).split(".");
+  if (splited[1] && splited[1].length > 2) {
+    return splited[0] + "." + splited[1].slice(0, 2);
+  }
+  return num.toFixed[2];
 }
-// console.log(funcdemical(5.1));
-// console.log(funcdemical(-5.1181));
-// console.log(funcdemical(-5.0));
-// console.log(funcdemical(-5.0));
-// console.log(funcdemical(-100093.28899994));
+
+console.log(to2Digit(-5.2224181));
+console.log(to2Digit(-5113.2224181));
+console.log(to2Digit(-5.7724181));
+console.log(to2Digit(-1.01224181));

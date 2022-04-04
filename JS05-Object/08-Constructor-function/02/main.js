@@ -3,18 +3,21 @@
 // -  มี method  read() ให้รับค่า input และให้บวกเข้ากับค่า currentValue
 // -  มี method  show() ให้ alert ค่า currentValue
 
-Constructorfunction = (startingValue) => {
+function Accumulator(startingValue) {
   this.curreentValue = startingValue;
   this.read = function () {
-    var x = prompt("Numplz");
-    var y = x + curreentValue;
-    console.log("x");
+    var xvalue = +prompt("Numplz");
+    this.curreentValue = xvalue + this.curreentValue;
     return;
   };
   this.show = function () {
-    alert(read());
+    alert(this.curreentValue);
   };
-};
+}
 
 // Constructorfunction(10);
-console.log(Constructorfunction());
+// console.log(Accumulator(20));
+// console.log(Accumulator(ale));
+const acc = new Accumulator(20);
+acc.read();
+acc.show();

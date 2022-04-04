@@ -9,7 +9,22 @@ issameWord = (w1, w2) => {
     return false;
   }
 };
-console.log(issameWord("Hi", "hi"));
-console.log(issameWord("Hi", "he"));
-console.log(issameWord("Hi", "hI"));
-console.log(issameWord("sEX", "sex"));
+lib = ["Sex", "Porn", "Xxx"];
+ifspam = (word) => {
+  let i = 0;
+  word = prompt("wodrs");
+  for (let each of lib) {
+    if (issameWord(word, lib[i])) {
+      alert("Yeah u spam");
+    }
+    i++;
+  }
+};
+// console.log(issameWord("Hi", "hi"));
+// console.log(issameWord("Hi", "he"));
+// console.log(issameWord("Hi", "hI"));
+// console.log(issameWord("sEX", "sex"));
+console.log(ifspam());
+console.log(ifspam());
+console.log(ifspam());
+console.log(ifspam());

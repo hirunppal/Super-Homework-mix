@@ -14,34 +14,52 @@
 
 // console.log(Objectcal);
 
-let calculator = {
-  read: function (inp1, inp2) {
-    return {
-      input1: inp1,
-      input2: inp2,
-      ref: this,
-    };
-  },
-  sum: function () {
-    let info = this.read(10, 20);
-    {
-      console.log(info);
-      let suma = info.input1 + info.input2;
-      //   console.log(info.ref.input1);
-      return suma;
-    }
-  },
-  mul: function () {
-    let info = this.read(10, 20);
-    {
-      console.log(info);
-      let multi = info.input1 * info.input2;
-      //   console.log(info.ref.input1);
-      return multi;
-    }
-  },
-};
-calculator.read(10, 20);
-console.log(calculator.read(10, 20));
-alert(calculator.sum());
-alert(calculator.mul());
+// let calculator = {
+//   read: function (inp1, inp2) {
+//     return {
+//       input1: inp1,
+//       input2: inp2,
+//       ref: this,
+//     };
+//   },
+//   sum: function () {
+//     let info = this.read(10, 20);
+//     {
+//       console.log(info);
+//       let suma = info.input1 + info.input2;
+//       //   console.log(info.ref.input1);
+//       return suma;
+//     }
+//   },
+//   mul: function () {
+//     let info = this.read(10, 20);
+//     {
+//       console.log(info);
+//       let multi = info.input1 * info.input2;
+//       //   console.log(info.ref.input1);
+//       return multi;
+//     }
+//   },
+// };
+// calculator.read(10, 20);
+// console.log(calculator.read(10, 20));
+// alert(calculator.sum());
+// alert(calculator.mul());
+
+function calright() {
+  this.read = function () {
+    this.input1 = +prompt("n1");
+    this.input2 = +prompt("n2");
+  };
+  this.sum = function () {
+    let summ = this.input1 + this.input2;
+    return alert(summ);
+  };
+  this.mul = function () {
+    return alert(this.input1 * this.input2);
+  };
+}
+const calcu = new calright();
+calcu.read();
+calcu.sum();
+calcu.mul();
